@@ -23,4 +23,5 @@ It also uses and builds on the following techniques from previous lessons:
 * Observable state LiveData variables to trigger navigation
 
 
+![](screenshots/sleep_recycler.PNG)
 
