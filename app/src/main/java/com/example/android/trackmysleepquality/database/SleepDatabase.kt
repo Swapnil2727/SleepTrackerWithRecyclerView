@@ -55,23 +55,7 @@ abstract class SleepDatabase : RoomDatabase() {
         @Volatile
         private var INSTANCE: SleepDatabase? = null
 
-        /**
-         * Helper function to get the database.
-         *
-         * If a database has already been retrieved, the previous database will be returned.
-         * Otherwise, create a new database.
-         *
-         * This function is threadsafe, and callers should cache the result for multiple database
-         * calls to avoid overhead.
-         *
-         * This is an example of a simple Singleton pattern that takes another Singleton as an
-         * argument in Kotlin.
-         *
-         * To learn more about Singleton read the wikipedia article:
-         * https://en.wikipedia.org/wiki/Singleton_pattern
-         *
-         * @param context The application context Singleton, used to get access to the filesystem.
-         */
+
         fun getInstance(context: Context): SleepDatabase {
             // Multiple threads can ask for the database at the same time, ensure we only initialize
             // it once by using synchronized. Only one thread may enter a synchronized block at a
